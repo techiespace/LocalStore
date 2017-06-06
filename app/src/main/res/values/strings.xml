@@ -4,5 +4,29 @@
     <string name="title_contact">Contact Us</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Contact Fragment</string>
+    <!--<string name="hello_blank_fragment">Contact Fragment</string>-->
+
+    <string-array name="item_name">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+        <item>Item 7</item>
+        <item>Item 8</item>
+    </string-array>
+
+    <string-array name="item_desc">
+        <item>Description 1</item>
+        <item>Description 2</item>
+        <item>Description 3</item>
+        <item>Description 4</item>
+        <item>Description 5</item>
+        <item>Description 6</item>
+        <item>Description 7</item>
+        <item>Description 8</item>
+
+    </string-array>
+
 </resources>

@@ -3,10 +3,11 @@ package com.techiespace.projects.localstore;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 
 /**
@@ -14,6 +15,11 @@ import android.widget.Toast;
  */
 public class Shop extends Fragment {
 
+
+    RecyclerView shopList;
+    String itemTitle[], itemDescription[];
+    int productImage[] = {R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2};
+    ShopListAdapter myshopListAdaper;
 
     public Shop() {
         // Required empty public constructor
@@ -24,8 +30,15 @@ public class Shop extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Toast.makeText(getContext(), "InShop", Toast.LENGTH_SHORT).show();
-        return inflater.inflate(R.layout.fragment_shop, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_shop, container, false);
+        shopList = (RecyclerView) rootView.findViewById(R.id.shopRecyclerView);
+        itemTitle = getResources().getStringArray(R.array.item_name);
+        itemDescription = getResources().getStringArray(R.array.item_desc);
+        myshopListAdaper = new ShopListAdapter(getContext(), itemTitle, itemDescription, productImage);
+
+        shopList.setAdapter(myshopListAdaper);
+        shopList.setLayoutManager(new LinearLayoutManager(getContext()));
+        return rootView;
     }
 
 }
