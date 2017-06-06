@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Local Store</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_contact">Contact Us</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Contact Fragment</string>
+</resources>
