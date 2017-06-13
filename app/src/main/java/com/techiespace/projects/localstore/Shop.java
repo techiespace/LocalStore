@@ -19,7 +19,7 @@ public class Shop extends Fragment {
     RecyclerView shopList;
     String itemTitle[], itemDescription[];
     int productImage[] = {R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2, R.drawable.dummy_img_1, R.drawable.dummy_img_2};
-    ShopListAdapter myshopListAdaper;
+    ShopListAdapter myshopListAdapter;
 
     public Shop() {
         // Required empty public constructor
@@ -34,9 +34,9 @@ public class Shop extends Fragment {
         shopList = (RecyclerView) rootView.findViewById(R.id.shopRecyclerView);
         itemTitle = getResources().getStringArray(R.array.item_name);
         itemDescription = getResources().getStringArray(R.array.item_desc);
-        myshopListAdaper = new ShopListAdapter(getContext(), itemTitle, itemDescription, productImage);
+        myshopListAdapter = new ShopListAdapter(getContext(), itemTitle, itemDescription, productImage);
 
-        shopList.setAdapter(myshopListAdaper);
+        shopList.setAdapter(myshopListAdapter);
         shopList.setLayoutManager(new LinearLayoutManager(getContext()));
         return rootView;
     }
